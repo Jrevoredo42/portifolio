@@ -67,9 +67,13 @@ src/
 
 ### Cores
 - **Primary**: #12f7d6 (Verde Ciano)
+- **Secondary**: #10b981 (Verde Esmeralda)
 - **Background**: #0a0e1a (Azul Escuro)
-- **Card**: #141824
+- **Card/Surface**: #141824
+- **Elevated**: #1a1f2e
 - **Muted**: #1f2937
+- **Muted Foreground**: #9ca3af
+- **Border**: rgba(18, 247, 214, 0.2)
 
 ### Tipografia
 - Font Principal: System UI Stack
