@@ -1,0 +1,12 @@
+.next
+next-env.d.ts
+dist
+documentation
+.specstory
+node_modules
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+out
+build
