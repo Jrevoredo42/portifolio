@@ -199,10 +199,10 @@ export const certificates: Certificate[] = [
   {
     id: "5",
     title: "Fundamentos de Node.js",
-    date: "2025",
+    date: "2026",
     organization: "Rocketseat",
     image: "/certificados/fundamentos-nodejs.png",
-    category: "tech",
+    category: "backend",
     description: "Fundamentos do desenvolvimento backend com Node.js, incluindo APIs RESTful, módulos e boas práticas de programação."
   },
   {
@@ -240,6 +240,15 @@ export const certificates: Certificate[] = [
     image: "/certificados/sauter-university.png",
     category: "infra",
     description: "Programa de capacitação interna em tecnologias de infraestrutura, cloud computing e práticas DevOps."
+  },
+  {
+    id: "10",
+    title: "Fundamentos de React",
+    date: "2026",
+    organization: "RocketSeat",
+    image: "/certificados/fundamentos-react.png",
+    category: "frontend",
+    description: "Curso introdutório ao React, abordando conceitos fundamentais da ferramenta e boas práticas de desenvolvimento atuais."
   },
 ];
 

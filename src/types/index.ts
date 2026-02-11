@@ -27,7 +27,7 @@ export interface Certificate {
   organization: string;
   date: string;
   image: string;
-  category: "tech" | "infra" | "language" | "other";
+  category: "infra" | "language" | "other" | "frontend" | "backend";
   url?: string;
   description?: string;
 }

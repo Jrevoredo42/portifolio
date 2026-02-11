@@ -11,10 +11,11 @@ import { Certificate } from "@/types";
 import gsap from "gsap";
 
 const categoryLabels = {
-  tech: "Tecnologia & Programação",
   infra: "Infraestrutura & Redes",
   language: "Inglês como Segunda Língua",
   other: "Outros Certificados",
+  frontend: "Desenvolvimento Frontend",
+  backend: "Desenvolvimento Backend",
 };
 
 const certificateImages: Record<string, string> = {
@@ -22,6 +23,8 @@ const certificateImages: Record<string, string> = {
   infra: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop",
   language: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=600&auto=format&fit=crop",
   other: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&auto=format&fit=crop",
+  frontend: "/frontend.png",
+  backend: "/backend.png",
 };
 
 export default function CertificadosPage() {
