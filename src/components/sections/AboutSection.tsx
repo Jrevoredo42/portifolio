@@ -42,7 +42,7 @@ export function AboutSection() {
                 trabalho com stacks completas, desde o front-end até o back-end e infraestrutura.
               </p>
               <p>
-                Além da programação me desempenho como Pesquisador e produtor Cultural, 
+                Além da programação me desempenho como Pesquisador e produtor Cultural,
                 atuando com inovação tecnológica em projetos culturais.
               </p>
             </div>
@@ -53,12 +53,12 @@ export function AboutSection() {
                 <p className="text-sm text-muted-foreground">Anos de Experiência</p>
               </div>
               <div className="p-4 rounded-lg bg-card border border-border">
-                <h4 className="text-3xl font-mono text-primary mb-1">50+</h4>
-                <p className="text-sm text-muted-foreground">Projetos Concluídos</p>
+                <h4 className="text-xl font-bold mb-1">Desenvolvimento ponta-a-ponta</h4>
+                <p className="text-sm text-muted-foreground"> Diversos projetos Concluídos</p>
               </div>
               <div className="p-4 rounded-lg bg-card border border-border">
                 <h4 className="text-3xl font-mono text-primary mb-1">15+</h4>
-                <p className="text-sm text-muted-foreground">Certificações</p>
+                <p className="text-sm text-muted-foreground">Certificados</p>
               </div>
               <div className="p-4 rounded-lg bg-card border border-border">
                 <h4 className="text-3xl font-mono text-primary mb-1">20+</h4>
