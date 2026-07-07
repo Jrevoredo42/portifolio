@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "../ui/button";
 import gsap from "gsap";
 
@@ -95,6 +95,7 @@ export function HeroSection() {
               <a
                 href="https://github.com/Jrevoredo42"
                 target="_blank"
+                title="GitHub"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
               >
@@ -103,6 +104,7 @@ export function HeroSection() {
               <a
                 href="https://linkedin.com/in/joao-revoredo"
                 target="_blank"
+                title="LinkedIn"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
               >
@@ -110,9 +112,19 @@ export function HeroSection() {
               </a>
               <a
                 href="mailto:devoredo42@email.com"
+                title="Email"
                 className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
               >
                 <Mail size={24} />
+              </a>
+              <a
+                href="/curriculo/curriculo-joao-revoredo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Currículo"
+                className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
+              >
+                <FileText size={24} />
               </a>
             </div>
           </div>
