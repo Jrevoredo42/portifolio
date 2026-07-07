@@ -11,7 +11,7 @@ import { ExternalLink, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projectImages: Record<string, string> = {
-  "1": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+  "1": "/valeu-boi-page.png",
   "2": "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=800&auto=format&fit=crop",
   "3": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
   "4": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop",
@@ -31,8 +31,8 @@ export default function ProjetosPage() {
     { label: "Full Stack", value: "fullstack" },
   ];
 
-  const filteredProjects = filter === "all" 
-    ? projects 
+  const filteredProjects = filter === "all"
+    ? projects
     : projects.filter(p => p.category === filter);
 
   return (
@@ -69,41 +69,44 @@ export default function ProjetosPage() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
+              className="group flex flex-col rounded-xl overflow-hidden border border-border hover:border-primary/50 bg-card/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               {/* Project Image */}
-              <div className="relative h-64 overflow-hidden bg-card">
+              <div className="relative h-48 overflow-hidden bg-card/80 border-b border-border/50">
                 <ImageWithFallback
                   src={projectImages[project.id] || projectImages["1"]}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
-                
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="flex items-center gap-2 text-primary">
-                    <ExternalLink size={24} />
-                    <span className="font-mono">Ver Detalhes</span>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-background/40 backdrop-blur-[2px]">
+                  <div className="flex items-center gap-2 text-primary bg-background/90 border border-primary/30 px-4 py-2 rounded-lg font-mono text-sm shadow-lg shadow-black/50 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <ExternalLink size={16} />
+                    <span>Ver Detalhes</span>
                   </div>
                 </div>
               </div>
 
               {/* Project Info */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="mb-2">
-                  <span className="inline-block px-3 py-1 text-xs rounded-full bg-primary/20 text-primary border border-primary/30 font-mono capitalize">
-                    {project.category}
-                  </span>
+              <div className="flex-1 p-6 flex flex-col justify-between bg-gradient-to-b from-card/30 to-card/60">
+                <div>
+                  <div className="mb-3">
+                    <span className="inline-block px-3 py-0.5 text-sm uppercase tracking-wider rounded-full bg-primary/10 text-primary border border-primary/20 font-mono">
+                      {project.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-mono text-primary mb-2 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-mono text-primary mb-2 group-hover:translate-x-2 transition-transform">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
+
+                <div className="flex flex-wrap gap-3 gap-y-6 pt-2 border-t border-border/30">
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
@@ -113,7 +116,7 @@ export default function ProjetosPage() {
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="text-xs text-primary font-mono">
+                    <span className="text-xs text-primary font-mono font-bold">
                       +{project.technologies.length - 3}
                     </span>
                   )}

@@ -52,14 +52,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     </div>
                   </div>
                 </div>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={onClose}
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  <X size={24} />
-                </Button>
+
               </div>
             </DialogHeader>
 
@@ -67,7 +60,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               {/* Project Image */}
               <div className="relative rounded-xl overflow-hidden border border-border">
                 <ImageWithFallback
-                  src={`https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop`}
+                  src={'/valeu-boi-capa.png'}
                   alt={project.title}
                   className="w-full h-auto object-cover"
                 />
@@ -79,7 +72,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   <Button asChild className="gap-2">
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink size={18} />
-                      Ver Demo
+                      Ver Projeto
                     </a>
                   </Button>
                 )}

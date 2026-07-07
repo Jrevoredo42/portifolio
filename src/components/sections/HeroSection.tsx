@@ -62,7 +62,7 @@ export function HeroSection() {
                 ref={subtitleRef}
                 className="text-xl lg:text-2xl text-muted-foreground max-w-xl"
               >
-                 Full Stack especializado em criar experiências digitais
+                Full Stack especializado em criar experiências digitais
                 incríveis e soluções tecnológicas inovadoras.
               </p>
             </div>
@@ -93,7 +93,7 @@ export function HeroSection() {
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/Jrevoredo42"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
@@ -101,7 +101,7 @@ export function HeroSection() {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/joao-revoredo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
@@ -109,7 +109,7 @@ export function HeroSection() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:contato@email.com"
+                href="mailto:devoredo42@email.com"
                 className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
               >
                 <Mail size={24} />

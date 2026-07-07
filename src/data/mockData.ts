@@ -8,9 +8,9 @@ export const techStack: TechStack[] = [
   { name: "Java", icon: "/icons/java.svg", category: "languages" },
   { name: "JavaScript", icon: "/icons/javascript.svg", category: "languages" },
   { name: "TypeScript", icon: "/icons/typescript.svg", category: "languages" },
-  { name: "Node.js", icon: "/icons/nodejs.svg", category: "backend"},
+  { name: "Node.js", icon: "/icons/nodejs.svg", category: "backend" },
   { name: "NestJS", icon: "/icons/nestjs.svg", category: "backend" },
-  { name: "Prisma", icon: "/icons/prisma.svg", category: "backend"},
+  { name: "Prisma", icon: "/icons/prisma.svg", category: "backend" },
   { name: "Next.js", icon: "/icons/next.svg", category: "frontend" },
   { name: "PostgreSQL", icon: "/icons/postgres.svg", category: "backend" },
   { name: "Fastify", icon: "/icons/fastify.svg", category: "backend" },
@@ -29,134 +29,32 @@ export const techStack: TechStack[] = [
 ];
 
 export const projects: Project[] = [
-  /*
+
   {
     id: "1",
-    title: "Sistema de E-commerce Full Stack",
-    description: "Plataforma completa de comércio eletrônico com painel administrativo",
-    longDescription: "Uma solução completa de e-commerce desenvolvida do zero, incluindo catálogo de produtos, carrinho de compras, checkout integrado com gateways de pagamento, sistema de gestão de pedidos e dashboard administrativo com métricas em tempo real.",
-    image: "ecommerce platform",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis", "Docker"],
+    title: "Valeu boi - Plataforma de Compra de senhas para Eventos de Vaquejada",
+    description: "Plataforma que gerencia vendas de senhas para competições nos eventos de vaquejada.",
+    longDescription: "O sistema permite que vaqueiros (clientes) comprem senhas para participar de competições de vaquejada, e que administradores gerenciem eventos, categorias e senhas disponíveis.",
+    image: "public/valeu-boi-page.png",
+    technologies: ["React", "Node.js", "Asaas", "Next.js", "Tailwind CSS", "Supabase", "Figma", "GSAP", "Nginx", "Github Actions", "Docker", "CI/CD", "Docker Compose", "Radix"],
     category: "fullstack",
     features: [
-      "Sistema de autenticação JWT com refresh tokens",
-      "Integração com múltiplos gateways de pagamento",
-      "Dashboard administrativo com métricas em tempo real",
-      "Sistema de notificações via email e SMS",
-      "Cache distribuído com Redis para melhor performance",
-      "API RESTful documentada com Swagger",
-      "Testes unitários e de integração com 90% de cobertura"
+      "Sistema de autenticação e autorização com NextAuth",
+      "Catálogo de eventos e categorias de vaquejada",
+      "Carrinho de compras e integração com gateway de pagamento Asaas",
+      "Formas de pagamento variadas, incluindo cartão de crédito, boleto e PIX",
+      "Painel de usuário para acompanhamento de compras e histórico",
+      "Dashboard administrativo para gestão de eventos, categorias e senhas",
+      "Geração de Relatórios de vendas e Eventos",
+      "Design responsivo e interativo com Tailwind CSS e GSAP",
+      "Deploy automatizado com Docker, Nginx, Github Actions, e VPC",
     ],
-    challenges: "O maior desafio foi implementar um sistema de inventário em tempo real que prevenisse overselling durante picos de acesso. Resolvemos implementando uma fila de processamento com Redis e locks distribuídos.",
-    results: "A plataforma processou mais de 10.000 pedidos no primeiro mês, com tempo médio de resposta de 200ms e 99.9% de uptime.",
-    year: 2024,
-    githubUrl: "https://github.com/usuario/ecommerce",
-    demoUrl: "https://demo-ecommerce.com"
-  },
-  {
-    id: "2",
-    title: "Aplicativo de Saúde e Fitness",
-    description: "App mobile para tracking de exercícios e nutrição",
-    longDescription: "Aplicativo mobile multiplataforma que permite aos usuários monitorar suas atividades físicas, criar planos de treino personalizados, acompanhar nutrição e visualizar progresso através de gráficos detalhados.",
-    image: "fitness mobile",
-    technologies: ["React Native", "TypeScript", "Firebase", "Expo", "Redux"],
-    category: "languages",
-    features: [
-      "Tracking de exercícios com GPS para corridas e caminhadas",
-      "Biblioteca com mais de 500 exercícios catalogados",
-      "Planos de treino personalizados com IA",
-      "Contador de calorias e macronutrientes",
-      "Sincronização com dispositivos wearables",
-      "Gamificação com conquistas e desafios",
-      "Modo offline com sincronização automática"
-    ],
-    challenges: "Implementar o tracking de GPS de forma eficiente sem drenar a bateria foi um desafio. Utilizamos geofencing e batching de localizações para otimizar o consumo.",
-    results: "Mais de 5.000 downloads na primeira semana, com rating médio de 4.7 estrelas e 85% de taxa de retenção em 30 dias.",
-    year: 2024,
-    githubUrl: "https://github.com/usuario/fitness-app"
-  },
-  {
-    id: "3",
-    title: "Dashboard de Analytics",
-    description: "Plataforma de visualização de dados e métricas empresariais",
-    longDescription: "Dashboard interativo para visualização e análise de dados empresariais em tempo real, com gráficos customizáveis, exportação de relatórios e integrações com múltiplas fontes de dados.",
-    image: "analytics dashboard",
-    technologies: ["React", "D3.js", "TypeScript", "GraphQL", "WebSocket"],
-    category: "web",
-    features: [
-      "Gráficos interativos com D3.js e Recharts",
-      "Atualização de dados em tempo real via WebSocket",
-      "Filtros avançados e drill-down de dados",
-      "Exportação de relatórios em PDF e Excel",
-      "Sistema de alertas customizáveis",
-      "Integração com Google Analytics, Mixpanel e fontes customizadas",
-      "Modo escuro e temas personalizáveis"
-    ],
-    challenges: "Lidar com grandes volumes de dados mantendo a interface responsiva exigiu implementação de virtualização de listas e lazy loading de componentes.",
-    results: "Redução de 70% no tempo de geração de relatórios em comparação com o sistema anterior.",
-    year: 2023,
-    demoUrl: "https://demo-analytics.com"
-  },
-  {
-    id: "4",
-    title: "Sistema de Gerenciamento Educacional",
-    description: "Plataforma para gestão de escolas e universidades",
-    longDescription: "Sistema completo para gestão educacional incluindo matrícula de alunos, controle de frequência, notas, biblioteca virtual e comunicação entre professores, alunos e pais.",
-    image: "education system",
-    technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth", "Tailwind"],
-    category: "fullstack",
-    features: [
-      "Portal do aluno com acesso a notas e frequência",
-      "Sistema de biblioteca virtual com controle de empréstimos",
-      "Chat em tempo real entre professores e alunos",
-      "Geração automática de boletins e históricos",
-      "Calendário acadêmico integrado",
-      "Sistema de notificações multi-canal",
-      "Relatórios gerenciais e estatísticos"
-    ],
-    year: 2023,
-    githubUrl: "https://github.com/usuario/edu-system"
-  },
-  {
-    id: "5",
-    title: "Rede Social para Desenvolvedores",
-    description: "Plataforma para compartilhamento de código e networking",
-    longDescription: "Rede social focada em desenvolvedores para compartilhar snippets de código, projetos, fazer networking e colaborar em projetos open source.",
-    image: "developer network",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "AWS S3"],
-    category: "fullstack",
-    features: [
-      "Editor de código integrado com syntax highlighting",
-      "Sistema de follows e feed personalizado",
-      "Comentários e reactions em posts",
-      "Sistema de mensagens diretas",
-      "Integração com GitHub para importar repositórios",
-      "Sistema de tags e busca avançada",
-      "Modo escuro nativo"
-    ],
-    year: 2023,
-    demoUrl: "https://devnetwork-demo.com"
-  },
-  {
-    id: "6",
-    title: "Aplicativo de Delivery de Comida",
-    description: "Marketplace para restaurantes com app de entrega",
-    longDescription: "Plataforma completa de delivery incluindo aplicativo para clientes, painel para restaurantes e app para entregadores, com tracking em tempo real.",
-    image: "food delivery",
-    technologies: ["React Native", "Node.js", "PostgreSQL", "Redis", "Google Maps"],
-    category: "languages",
-    features: [
-      "Tracking de entrega em tempo real",
-      "Sistema de pagamento integrado",
-      "Avaliações e reviews de restaurantes",
-      "Cupons e promoções dinâmicas",
-      "Histórico de pedidos",
-      "Notificações push em tempo real",
-      "Sistema de fidelidade e pontos"
-    ],
-    year: 2024,
+    challenges: "Gerenciamento de estados complexos, com integração de gateway de pagamento, e implementação de um sistema robusto ponta a ponta integrando frontend, backend, e infraestrutura individualmente.",
+    results: "Projeto totalmente funcional, com MVP validado por usuários reais e pelo próprio cliente, com feedbacks positivos e melhorias contínuas implementadas.",
+    year: 2026,
+
+    demoUrl: "https://valeuboi.com"
   }
-    */
 ];
 
 export const certificates: Certificate[] = [
@@ -201,7 +99,7 @@ export const certificates: Certificate[] = [
     title: "Fundamentos de Node.js",
     date: "2026",
     organization: "Rocketseat",
-    image: "/certificados/fundamentos-nodejs.png",
+    image: "/certificados/fundamentos-node.png",
     category: "backend",
     description: "Fundamentos do desenvolvimento backend com Node.js, incluindo APIs RESTful, módulos e boas práticas de programação."
   },
@@ -272,7 +170,7 @@ export const experiences: WorkExperience[] = [
     position: "Tecnologo em Análise e Desenvolvimento de Sistemas",
     period: "2023 - atual",
     description: "Bases e aprofundamento na área de desenvolvimento de sistemas, com foco em boas práticas, metodologias ágeis e tecnologias modernas.",
-    technologies: ["React", "TypeScript","Node.js", "Next.js", "Tailwind CSS", "Jest","Figma"],
+    technologies: ["React", "TypeScript", "Node.js", "Next.js", "Tailwind CSS", "Jest", "Figma"],
     achievements: [
       "Desenvolveu Projetos de Portifólio Profissional",
       "Se aprofundou em design responsivo e acessibilidade web",
@@ -326,6 +224,6 @@ export const experiences: WorkExperience[] = [
     position: "Engenheiro de Software",
     period: "2022 - atual",
     description: "Atuação como desenvolvedor full stack freelancer, criando soluções personalizadas para clientes variados, desde landing pages até sistemas completos ponta a ponta.",
-  technologies: ["React", "Node.js", "Next.js", "Nest.js", "Tailwind CSS", "PostgreSQL", "Figma", "DevOps", "AI"],
+    technologies: ["React", "Node.js", "Next.js", "Nest.js", "Tailwind CSS", "PostgreSQL", "Figma", "DevOps", "AI"],
   }
 ];
