@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 const projectImages: Record<string, string> = {
   "1": "/valeu-boi-page.png",
-  "2": "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=800&auto=format&fit=crop",
+  "2": "/project-atmosfera.png",
   "3": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
   "4": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop",
   "5": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&auto=format&fit=crop",

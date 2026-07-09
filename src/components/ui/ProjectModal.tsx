@@ -7,6 +7,15 @@ import { Project } from "@/types";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import gsap from "gsap";
 
+const projectModalImages: Record<string, string> = {
+  "1": "/valeu-boi-capa.png",
+  "2": "/project-atmosfera-modal.png",
+  "3": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+  "4": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop",
+  "5": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&auto=format&fit=crop",
+  "6": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+};
+
 interface ProjectModalProps {
   project: Project | null;
   isOpen: boolean;
@@ -60,7 +69,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               {/* Project Image */}
               <div className="relative rounded-xl overflow-hidden border border-border">
                 <ImageWithFallback
-                  src={'/valeu-boi-capa.png'}
+                  src={projectModalImages[project.id] || "/valeu-boi-capa.png"}
                   alt={project.title}
                   className="w-full h-auto object-cover"
                 />

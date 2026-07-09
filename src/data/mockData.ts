@@ -54,7 +54,26 @@ export const projects: Project[] = [
     year: 2026,
 
     demoUrl: "https://valeuboi.com"
-  }
+  },
+  {
+    id: "2",
+    title: "Site para expografia virtual de arte em aquarela",
+    description: "Site para exposição virtual de arte em aquarela",
+    longDescription: "Este projeto consiste na expografia virtual de obras de arte em aquarela, onde as obras são exibidas em uma interface web interativa e imersivas, trabalhando desgin, responsibilidade, criatividade e interação.",
+    image: "/project-atmosfera.png",
+    technologies: ["React", "Node.js", "Next.js", "Tailwind CSS", "Figma", "GSAP", "Framer Motion", "Vercel", "Shadcn UI", "Radix"],
+    category: "web",
+    features: [
+      "Interface altamente dinâmica e responsiva, com design moderno e atraente.",
+      "Desenvolvimento de animações utilizando GSAP e Framer Motion.",
+      "Utilização de hospedagem via Vercel",
+    ],
+    challenges: "Estruturação de sistema para exposição de algo qualitativo e artístico, com uma subjetividade que deve ser bem encaixada dentro de um sistema web.",
+    results: "Projeto funcional e elogiado pela curadoria, com boa aceitação por parte dos usuários, com feedbacks positivos e melhorias contínuas implementadas.",
+    year: 2026,
+
+    demoUrl: "https://exposicao-atmosfera.vercel.app/"
+  },
 ];
 
 export const certificates: Certificate[] = [
@@ -147,6 +166,15 @@ export const certificates: Certificate[] = [
     image: "/certificados/fundamentos-react.png",
     category: "frontend",
     description: "Curso introdutório ao React, abordando conceitos fundamentais da ferramenta e boas práticas de desenvolvimento atuais."
+  },
+  {
+    id: "11",
+    title: "Engenharia de Prompt",
+    date: "2026",
+    organization: "Rocketseat",
+    image: "/certificados/engenharia-de-prompt.png",
+    category: "other",
+    description: "O curso foi pensado para quem busca entender, de forma prática e objetiva, como construir prompts que realmente funcionam Ao longo das aulas, foi aprendido a refinar perguntas, estruturar cadeias de pensamento e comparar diferentes abordagens para obter melhores resultados com inteligência artificial."
   },
 ];
 
