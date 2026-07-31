@@ -118,7 +118,7 @@ export function HeroSection() {
                 <Mail size={24} />
               </a>
               <a
-                href="/curriculo/curriculo-joao-revoredo.pdf"
+                href="/curriculo/curriculo-revoredo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Currículo"
